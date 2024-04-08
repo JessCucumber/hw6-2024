@@ -42,36 +42,37 @@ document.querySelector("#faster").addEventListener("click", function() {
 
 //skippidy-bop-bop (10 seconds)
 document.querySelector("#skip").addEventListener("click", function() {
-	console.log("Skip Ahead");
 	video.currentTime = video.currentTime + 10;
+	console.log("Skip Ahead");
+
 	//this function above =  10 seconds//
 });
 
 // mute
 document.querySelector("#mute").addEventListener("click", function() {
-    console.log("Mute");
-    video.muted = !video.muted; 
-});
+	video.muted = !video.muted; 
+	console.log("Mute"); 
+}); 
 
 //change volume (slider thingy)
 document.querySelector("#slider").addEventListener("change", function() {
 	video.volume = this.value / 100;
-		document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
-		console.log("Video Volume is", video.volume)
+		document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
+		console.log('Volume is', video.volume);
 
 });
 
 
 // old school vibes
-document.querySelector("#vintage").addEventListener("click", function() {
-	video.classList.add("oldSchool");
-	console.log("Style is vintage")
+document.querySelector('#vintage').addEventListener("click", function() {
+	video.classList.add('oldSchool');
+	console.log('Style is vintage');
 
 })
 
 //too cool for old school - back to og style
-document.querySelector("#orig").addEventListener("click", function() {
-	video.classList.remove("oldSchool");
-	console.log("Style is original");
+document.querySelector('#orig').addEventListener("click", function() {
+	video.classList.remove('oldSchool');
+	console.log('Style is original');
 
 })
