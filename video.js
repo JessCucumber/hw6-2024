@@ -26,19 +26,17 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 //slowwwwwwwwww
 document.querySelector("#slower").addEventListener("click", function() {
-	console.log("Slow Down");
-
 	//function to slow it down
 	video.playbackRate = video.playbackRate-.10;
-	console.log(video.playbackRate);
+	console.log("Slowed Video to", video.playbackRate);
 });
 
 //I am SPEED
 //hints from Jackie during class :look at the video for playback speed - 10%
 document.querySelector("#faster").addEventListener("click", function() {
-	console.log("Speed Up");
 	video.playbackRate = video.playbackRate+.10;
-	console.log(video.playbackRate);
+	console.log("Sped Up Video to", video.playbackRate);
+
 });
 
 
@@ -59,7 +57,7 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("change", function() {
 	video.volume = this.value / 100;
 		document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
-		console.log("Vintage style")
+		console.log("Video Volume is", video.volume)
 
 });
 
@@ -67,7 +65,7 @@ document.querySelector("#slider").addEventListener("change", function() {
 // old school vibes
 document.querySelector("#vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
-	console.log("Vintage Style")
+	console.log("Style is vintage")
 
 })
 
