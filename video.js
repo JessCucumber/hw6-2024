@@ -1,9 +1,9 @@
 var video;
 var playbackRate = 1.0; 
+video=document.querySelector("#player1")
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window");
-	video=document.querySelector("#player1")
 	video.autoplay = false;
 	video.loop = false;
 	video.load();
@@ -73,13 +73,13 @@ document.querySelector("#slider").addEventListener("input", function() {
 // old school vibes
 document.querySelector("vintage").addEventListener("click", function() {
 	video.classList.add("oldSchool");
-	console.log("Old School Style")
+	console.log("Vintage Style")
 
 })
 
 //too cool for old school - back to og style
 document.querySelector("#orig").addEventListener("click", function() {
 	video.classList.remove("oldSchool");
-	console.log("Original Style");
+	console.log("Style is original");
 
 })
